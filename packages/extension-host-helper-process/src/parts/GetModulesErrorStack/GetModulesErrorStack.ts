@@ -14,7 +14,7 @@ const isJustPath = (line: string): boolean => {
 export const getModulesErrorStack = (stderr: any) => {
   const lines = SplitLines.splitLines(stderr)
   let startIndex = -1
-  const extraLines = []
+  const extraLines: string[] = []
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i]
     if (isJustPath(line)) {
