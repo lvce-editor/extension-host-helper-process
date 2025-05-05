@@ -12,7 +12,7 @@ export default [
     },
   },
   {
-    files: ['**/*.json'],
+    files: ['**/package.json'],
     rules: {
       'package-json/no-empty-fields': 'off',
       'package-json/valid-repository-directory': 'off',
