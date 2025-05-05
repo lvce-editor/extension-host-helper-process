@@ -1,6 +1,6 @@
-import * as HandleElectronMessagePort from '../HandleElectronMessagePort/HandleElectronMessagePort.js'
-import * as HandleWebSocket from '../HandleWebSocket/HandleWebSocket.js'
-import * as LoadFile from '../LoadFile/LoadFile.js'
+import * as HandleElectronMessagePort from '../HandleElectronMessagePort/HandleElectronMessagePort.ts'
+import * as HandleWebSocket from '../HandleWebSocket/HandleWebSocket.ts'
+import * as LoadFile from '../LoadFile/LoadFile.ts'
 
 export const commandMap = {
   'HandleWebSocket.handleWebSocket': HandleWebSocket.handleWebSocket,

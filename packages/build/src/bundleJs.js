@@ -9,7 +9,7 @@ import { root } from './root.js'
  * @type {import('rollup').RollupOptions}
  */
 const options = {
-  input: join(root, 'packages/extension-host-helper-process/src/extensionHostHelperProcessMain.js'),
+  input: join(root, 'packages/extension-host-helper-process/src/extensionHostHelperProcessMain.ts'),
   preserveEntrySignatures: 'strict',
   treeshake: {
     propertyReadSideEffects: false,

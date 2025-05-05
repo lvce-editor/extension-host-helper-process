@@ -4,9 +4,9 @@ import {
   IpcChildWithNodeForkedProcess,
   IpcChildWithWebSocket,
 } from '@lvce-editor/ipc'
-import * as IpcChildType from '../IpcChildType/IpcChildType.js'
+import * as IpcChildType from '../IpcChildType/IpcChildType.ts'
 
-export const getModule = (method) => {
+export const getModule = (method: any): any => {
   switch (method) {
     case IpcChildType.WebSocket:
       return IpcChildWithWebSocket

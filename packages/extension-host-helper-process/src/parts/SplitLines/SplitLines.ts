@@ -3,7 +3,7 @@
  * @param {string|undefined} lines
  * @returns string[]
  */
-export const splitLines = (lines) => {
+export const splitLines = (lines: string | undefined): readonly string[] => {
   if (!lines) {
     return []
   }

@@ -1,4 +1,4 @@
-import * as ParseCliArgs from '../ParseCliArgs/ParseCliArgs.js'
+import * as ParseCliArgs from '../ParseCliArgs/ParseCliArgs.ts'
 
 export const WebSocket = 1
 export const MessagePort = 2

@@ -1,8 +1,8 @@
-import * as GetModulesErrorStack from '../GetModulesErrorStack/GetModulesErrorStack.js'
-import * as JoinLines from '../JoinLines/JoinLines.js'
-import * as SplitLines from '../SplitLines/SplitLines.js'
+import * as GetModulesErrorStack from '../GetModulesErrorStack/GetModulesErrorStack.ts'
+import * as JoinLines from '../JoinLines/JoinLines.ts'
+import * as SplitLines from '../SplitLines/SplitLines.ts'
 
-const cleanImportSyntaxError = (error) => {
+const cleanImportSyntaxError = (error: any): any => {
   const cleanStackLines = GetModulesErrorStack.getModulesErrorStack(error.stack)
   const cleanError = new SyntaxError(error.message)
   const currentStack = JoinLines.joinLines(SplitLines.splitLines(new Error().stack).slice(3))
@@ -12,7 +12,7 @@ const cleanImportSyntaxError = (error) => {
   return cleanError
 }
 
-export const cleanImportError = (error) => {
+export const cleanImportError = (error: any): any => {
   if (error && error instanceof SyntaxError) {
     return cleanImportSyntaxError(error)
   }

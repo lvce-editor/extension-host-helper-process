@@ -4,10 +4,11 @@ import { tmpdir } from 'node:os'
 
 // TODO mock this module when used in unit tests
 
-const state = {
-  /**
-   * @type {Console|undefined}
-   */
+interface State {
+  console: Console | undefined
+}
+
+const state: State = {
   console: undefined,
 }
 
@@ -18,32 +19,32 @@ const createConsole = () => {
   return logger
 }
 
-const getOrCreateLogger = () => {
+const getOrCreateLogger = (): Console => {
   if (!state.console) {
     state.console = createConsole()
   }
   return state.console
 }
 
-export const log = (...args) => {
+export const log = (...args: readonly any[]): void => {
   const logger = getOrCreateLogger()
   logger.log(...args)
   console.log(...args)
 }
 
-export const info = (...args) => {
+export const info = (...args: readonly any[]) => {
   const logger = getOrCreateLogger()
   logger.info(...args)
   console.info(...args)
 }
 
-export const warn = (...args) => {
+export const warn = (...args: readonly any[]): void => {
   const logger = getOrCreateLogger()
   logger.warn(...args)
   console.warn(...args)
 }
 
-export const error = (...args) => {
+export const error = (...args: readonly any[]): void => {
   const logger = getOrCreateLogger()
   logger.error(...args)
   console.error(...args)

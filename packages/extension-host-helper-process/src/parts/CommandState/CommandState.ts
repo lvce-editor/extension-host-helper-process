@@ -1,15 +1,17 @@
-import * as Assert from '../Assert/Assert.js'
-import { VError } from '../VError/VError.js'
+import * as Assert from '../Assert/Assert.ts'
+import { VError } from '../VError/VError.ts'
 
-export const state = {
+interface State {
+  commands: any
+  execute: any
+}
+
+export const state: State = {
   commands: Object.create(null),
-  /**
-   * @type {any}
-   */
   execute: undefined,
 }
 
-export const registerCommand = (key, fn) => {
+export const registerCommand = (key: string, fn: any) => {
   try {
     Assert.string(key)
     Assert.fn(fn)
@@ -19,25 +21,25 @@ export const registerCommand = (key, fn) => {
   }
 }
 
-export const registerCommands = (commandMap) => {
+export const registerCommands = (commandMap: any) => {
   for (const [key, value] of Object.entries(commandMap)) {
     registerCommand(key, value)
   }
 }
 
-export const getCommand = (key) => {
+export const getCommand = (key: string): any => {
   const { commands, execute } = state
   if (key in commands) {
     return commands[key]
   }
   if (execute) {
-    return (...args) => {
+    return (...args: readonly any[]) => {
       return execute(key, ...args)
     }
   }
   return undefined
 }
 
-export const setExecute = (fn) => {
+export const setExecute = (fn: any): void => {
   state.execute = fn
 }

@@ -1,5 +1,5 @@
-import * as ExitCode from '../ExitCode/ExitCode.js'
-import * as Process from '../Process/Process.js'
+import * as ExitCode from '../ExitCode/ExitCode.ts'
+import * as Process from '../Process/Process.ts'
 
 export const handleDisconnect = () => {
   console.info('[shared process] disconnected')
