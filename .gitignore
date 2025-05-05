@@ -1,3 +1,9 @@
+.tmp
+dist
+coverage
+dist-old
+
+
 # Logs
 logs
 *.log
