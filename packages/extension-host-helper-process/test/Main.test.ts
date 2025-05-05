@@ -2,5 +2,5 @@ import { expect, test } from '@jest/globals'
 import * as Main from '../src/parts/Main/Main.js'
 
 test('main', () => {
-  expect(Main.WebWorkerRpcClient).toBeDefined()
+  expect(Main.main).toBeDefined()
 })
