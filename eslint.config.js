@@ -9,6 +9,12 @@ export default [
       '@typescript-eslint/prefer-readonly-parameter-types': 'off',
       'n/no-unsupported-features/node-builtins': 'off',
       'n/no-missing-import': 'off',
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      'n/no-process-exit': 'off',
+      'unicorn/no-process-exit': 'off',
+      'no-useless-escape': 'off',
+      'unicorn/error-message': 'off',
+      'no-console': 'off',
     },
   },
   {
