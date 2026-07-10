@@ -2,21 +2,21 @@ import * as FirstUtilityProcessEventType from '../FirstUtilityProcessEventType/F
 
 export const getFirstUtilityProcessEvent = async (parentPort: any): Promise<any> => {
   // @ts-ignore
-  const { type, event } = await new Promise((resolve) => {
+  const { event, type } = await new Promise((resolve) => {
     const cleanup = (value: any) => {
       parentPort.off('message', handleMessage)
       resolve(value)
     }
     const handleMessage = (event: any) => {
       cleanup({
-        type: FirstUtilityProcessEventType.Message,
         event,
+        type: FirstUtilityProcessEventType.Message,
       })
     }
     parentPort.on('message', handleMessage)
   })
   return {
-    type,
     event,
+    type,
   }
 }

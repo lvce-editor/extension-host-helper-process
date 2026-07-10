@@ -11,8 +11,8 @@ const handleClose = () => {
 export const handleElectronMessagePort = async (messagePort: any, ipcId: any): Promise<void> => {
   Assert.object(messagePort)
   const ipc = await IpcChild.listen({
-    method: IpcChildType.ElectronMessagePort,
     messagePort,
+    method: IpcChildType.ElectronMessagePort,
   })
   HandleIpc.handleIpc(ipc)
   if (ipcId === IpcId.ExtensionHostWorker) {
