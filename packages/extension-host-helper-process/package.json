@@ -8,7 +8,10 @@
     "directory": "packages/extension-host-helper-process"
   },
   "license": "MIT",
-  "author": "",
+  "author": {
+    "name": "Le Vivilet",
+    "email": "levivilet@pm.me"
+  },
   "type": "module",
   "main": "index.js",
   "scripts": {

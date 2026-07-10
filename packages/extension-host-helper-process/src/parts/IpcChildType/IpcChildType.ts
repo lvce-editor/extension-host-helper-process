@@ -18,20 +18,20 @@ const getRawIpcType = () => {
 export const Auto = () => {
   const ipcType = getRawIpcType()
   switch (ipcType) {
-    case 'websocket':
-      return WebSocket
-    case 'message-port':
-      return MessagePort
-    case 'parent':
-      return Parent
     case 'electron-message-port':
       return ElectronMessagePort
     case 'electron-utility-process':
       return ElectronUtilityProcess
     case 'electron-utility-process-message-port':
       return ElectronUtilityProcessMessagePort
+    case 'message-port':
+      return MessagePort
     case 'node-forked-process':
       return NodeForkedProcess
+    case 'parent':
+      return Parent
+    case 'websocket':
+      return WebSocket
     default:
       throw new Error(`[extension-host-helper-process] unknown ipc type ${ipcType}`)
   }

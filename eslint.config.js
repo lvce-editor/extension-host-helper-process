@@ -22,6 +22,19 @@ export default [
     rules: {
       'package-json/no-empty-fields': 'off',
       'package-json/valid-repository-directory': 'off',
+      'package-json/valid-description': 'off',
+      'package-json/sort-collections': 'off',
+      'package-json/valid-author': 'off',
+    },
+  },
+  {
+    files: ['packages/extension-host-helper-process/**/*.ts'],
+    rules: {
+      'unicorn/no-error-property-assignment': 'off',
+      'perfectionist/sort-objects': 'off',
+      'perfectionist/sort-switch-case': 'off',
+      'sonarjs/single-character-alternation': 'off',
+      'sonarjs/argument-type': 'off',
     },
   },
 ]
