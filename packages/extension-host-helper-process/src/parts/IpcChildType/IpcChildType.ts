@@ -1,11 +1,11 @@
 import * as ParseCliArgs from '../ParseCliArgs/ParseCliArgs.ts'
 
 export const WebSocket = 1
-export const MessagePort = 2
-export const Parent = 3
+const MessagePort = 2
+const Parent = 3
 export const ElectronMessagePort = 4
 export const ElectronUtilityProcess = 5
-export const ElectronUtilityProcessMessagePort = 6
+const ElectronUtilityProcessMessagePort = 6
 export const NodeForkedProcess = 7
 
 const getRawIpcType = () => {
