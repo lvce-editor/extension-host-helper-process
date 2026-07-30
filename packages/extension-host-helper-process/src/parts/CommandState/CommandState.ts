@@ -6,12 +6,12 @@ interface State {
   execute: any
 }
 
-export const state: State = {
+const state: State = {
   commands: Object.create(null),
   execute: undefined,
 }
 
-export const registerCommand = (key: string, fn: any) => {
+const registerCommand = (key: string, fn: any) => {
   try {
     Assert.string(key)
     Assert.fn(fn)
